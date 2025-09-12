@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<charset="UTF-8">
+
+<name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Portfolio</title>
+
+<style>
+
+    body {
+
+        font-family: Arial, sans-serif;
+
+        margin: 0;
+
+        padding: 0;
+
+        background: #f4f4f4;
+
+    }
+
+    header {
+
+        background: #333;
+
+        color: #fff;
+
+        padding: 15px;
+
+        text-align: center;
+
+    }
+
+    nav {
+
+        display: flex;
+
+        justify-content: center;
+
+        background: #444;
+
+    }
+
+    nav button {
+
+        background: #444;
+
+        color: #fff;
+
+        border: none;
+
+        padding: 10px 20px;
+
+        cursor: pointer;
+
+        font-size: 16px;
+
+    }
+
+    nav button:hover {
+
+        background: #666;
+
+    }
+
+    #content {
+
+        max-width: 900px;
+
+        margin: 20px auto;
+
+        background: #fff;
+
+        padding: 20px;
+
+        border-radius: 8px;
+
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    }
+
+    h2 {
+
+        color: #333;
+
+    }
+
+    .project {
+
+        margin-bottom: 10px;
+
+        padding: 10px;
+
+        background: #f9f9f9;
+
+        border-left: 4px solid #333;
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>surya.k</h1>
+
+</header>
+
+<nav>
+
+    <button onclick="showSection('home')">Home</button>
+
+    <button onclick="showSection('about')">About</button>
+
+    <button onclick="showSection('projects')">Projects</button>
+
+    <button onclick="showSection('contact')">Contact</button>
+
+</nav>
+
+<div id="content"></div>
+
+<script>
+
+    function showSection(section) {
+
+        let content = document.getElementById('content');
+
+        if (section === 'home') {
+
+            content.innerHTML = `
+
+                <h2>Welcome!</h2>
+
+                <p>As a web developer passionate about clean and responsive design, I believe that creating a front-end web page begins with planning a clear layout that includes key sections like a header, navigation, main content, and footer. Using HTML, we structure the content semantically to ensure readability and accessibility. CSS brings the design to life by adding color schemes, fonts, spacing, and responsiveness across devices, often using tools like Flexbox or Grid. To enhance user experience, JavaScript adds interactivity such as form validation, animations, or dynamic content. The goal is to combine structure, style, and function into a seamless user experience that works beautifully on all screen sizes.</p>
+
+            `;
+
+        } else if (section === 'about') {
+
+            content.innerHTML = `
+
+                <h2>About Me</h2>
+
+                <p>Hello! I'm a passionate and creative front-end web developer with a strong interest in building clean, responsive, and user-friendly websites. I enjoy turning ideas into interactive web experiences using technologies like HTML, CSS, and JavaScript. Whether it's designing smooth layouts or adding interactive features, I focus on creating websites that not only look great but also function seamlessly across devices. I'm always eager to learn new skills and take on exciting projects that challenge my creativity and coding abilities.</p>
+
+            `;
+
+        } else if (section === 'projects') {
+
+            content.innerHTML = `
+
+                <h2>My Projects</h2>
+
+                <div class="project"><strong>Portfolio Website</strong> - A simple responsive portfolio.</div>
+
+                <div class="project"><strong>To-Do App</strong> - A task management web application.</div>
+
+                <div class="project"><strong>Calculator</strong> - A simple calculator built with JavaScript.</div>
+
+            `;
+
+        } else if (section === 'contact') {
+
+            content.innerHTML = `
+
+                <h2>Contact Me</h2>
+
+                <p>Email: tnaloneboyitsme@gmail.com</p>
+
+                <p>Phone: 8220691795</p>
+
+                <center>
+
+             <img src="surya.html.jpg"
+
+            </center>
+
+            `;
+
+        }
+
+    }
+
+    // Load Home section by default
+
+    showSection('home');
+
+</script>
+
+</body>
+
+</html>
